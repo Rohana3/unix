@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #4a4e69; /* Soft purple */
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to top */
+  padding-top: 40px; /* Add gap at the top */
+  color: #f2e9e4; /* Light text */
+}
+
+/* Container */
+.container {
+  text-align: center;
+  width: 90%; /* Responsive width */
+  max-width: 800px;
+}
+
+/* Header */
+h1 {
+  margin-bottom: 30px;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between buttons */
+}
+
+/* Button Box */
+.button-box {
+  position: relative;
+  padding-bottom: 30px; /* Space between button and description */
+}
+
+/* Button */
+button {
+  width: 250px; /* Increase button width */
+  padding: 15px; /* Larger padding for better appearance */
+  font-size: 20px; /* Increase font size */
+  font-weight: bold; /* Make text bold */
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #22223b; /* Dark purple */
+  color: #9a8c98; /* Light mauve */
+  transition: all 0.3s ease;
+  text-transform: uppercase; /* Transform text to uppercase */
+}
+
+button:hover {
+  background-color: #9a8c98; /* Mauve */
+  color: #22223b; /* Dark text */
+}
+
+button.active {
+  background-color: #cacaf8; /* Same color as description box */
+  color: #22223b; /* Change text color to bright yellow when active */
+  position: absolute;
+  left: 10px;
+  top: 0;
+  transition: none;
+  margin-bottom: 20px; /* Add gap when button is clicked */
+}
+
+/* Description Box */
+.description-box {
+  display: none; /* Hidden by default */
+  margin-top: 70px; /* Margin space between button and description text */
+  padding: 20px;
+  width: 100%; /* Full width */
+  background-color: #22223b; /* Dark purple background */
+  color: #f2e9e4; /* Light text */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  animation: fadeIn 0.5s ease-in-out;
+  text-align: left; /* Align text to the left */
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 70vh; /* Limit the height to make scrolling effective */
+}
+
+/* Styling for List Items */
+.description-box ul li {
+  margin-bottom: 20px; /* Increase space between items */
+  font-size: 18px; /* Default size for description text */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Highlighted Command Names */
+.description-box ul li strong {
+  font-size: 22px; /* Make the command names bigger */
+  color: #ffb703; /* Bright color to highlight commands */
+  margin-bottom: 10px; /* Space between command name and description */
+  text-transform: uppercase; /* Uppercase command names */
+}
+
+/* Styling for the descriptions */
+.description-box ul li span {
+  font-size: 18px; /* Smaller size for the descriptions */
+  margin-bottom: 10px; /* Space before the example */
+  line-height: 1.5; /* Improved line spacing for readability */
+}
+
+/* Styling for the examples */
+.description-box ul li code {
+  font-size: 20px; /* Make the example text bigger */
+  background-color: #9a8c98; /* Light mauve background for code */
+  color: #22223b; /* Dark text for code */
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-left: 10px;
+  display: inline-block;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+/* Style for images below commands */
+.example-image {
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #f2e9e4;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
